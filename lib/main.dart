@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_test/second.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,6 +58,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String dateNow = DateFormat("yyyy年M月d日HH:mm 現在").format(DateTime.now());
 
   void _incrementCounter() {
     setState(() {
@@ -106,6 +108,11 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text(dateNow,
+                style: TextStyle(
+                  fontSize: 20,
+                )),
+            SizedBox(height: 20),
             const Text(
               'You have pushed the button this many times:',
             ),
