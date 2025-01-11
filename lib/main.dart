@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_test/second.dart';
 
 void main() {
   runApp(const MyApp());
@@ -111,6 +112,17 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            ElevatedButton(
+              child: Text('次へ'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SecondPage(),
+                  ),
+                );
+              },
             ),
           ],
         ),
