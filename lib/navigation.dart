@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_test/main.dart';
-import 'package:flutter_application_test/second.dart';
+import 'package:flutter_application_test/webView.dart';
 import 'package:flutter_application_test/third.dart';
 import 'package:flutter_application_test/fourth.dart';
 
@@ -41,7 +41,7 @@ class NavigationComponentWidget extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SecondPage(),
+                  builder: (context) => WebviewTestPage(),
                 ),
               );
             },

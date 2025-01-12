@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_test/navigation.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class SecondPage extends StatelessWidget {
-  const SecondPage({super.key});
+class WebviewTestPage extends StatelessWidget {
+  const WebviewTestPage({super.key});
 
   @override
   Widget build(BuildContext context) {
