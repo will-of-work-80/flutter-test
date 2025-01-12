@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_test/main.dart';
+import 'package:flutter_application_test/second.dart';
 
 class ThirdPage extends StatelessWidget {
   final con = Container(
@@ -12,6 +14,57 @@ class ThirdPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text('スタイルを色々テストする'),
+        ),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(
+                child: Text(
+                  '機能一覧',
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: Colors.white,
+                  ),
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.lightBlue,
+                ),
+              ),
+              ListTile(
+                title: Text('メイン画面'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MyApp(),
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                title: Text('セカンド画面'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SecondPage(),
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                title: Text('サード画面'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ThirdPage(),
+                    ),
+                  );
+                },
+              ),
+            ],
+          ),
         ),
         body: Container(
           height: double.infinity,
