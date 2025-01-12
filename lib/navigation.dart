@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_test/main.dart';
 import 'package:flutter_application_test/second.dart';
 import 'package:flutter_application_test/third.dart';
+import 'package:flutter_application_test/fourth.dart';
 
 class NavigationComponentWidget extends StatelessWidget {
   const NavigationComponentWidget({super.key});
@@ -52,6 +53,17 @@ class NavigationComponentWidget extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => ThirdPage(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('スクロールテスト'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => FourthPage(),
                 ),
               );
             },

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_test/navigation.dart';
-import 'package:flutter_application_test/second.dart';
 import 'package:intl/intl.dart';
 
 void main() {

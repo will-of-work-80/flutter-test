@@ -3,6 +3,8 @@ import 'package:flutter_application_test/navigation.dart';
 import 'package:flutter_application_test/third.dart';
 
 class SecondPage extends StatelessWidget {
+  const SecondPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
