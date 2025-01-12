@@ -109,15 +109,14 @@ class ThirdPage extends StatelessWidget {
                   colorSquare(Colors.cyan),
                 ],
               ),
-
-              Center(
-                child: ElevatedButton(
-                  child: Text('戻る'),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
-              ),
+              // Center(
+              //   child: ElevatedButton(
+              //     child: Text('戻る'),
+              //     onPressed: () {
+              //       Navigator.pop(context);
+              //     },
+              //   ),
+              // ),
             ],
           ),
         ));

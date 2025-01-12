@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_test/third.dart';
 import 'package:flutter_application_test/navigation.dart';
+import 'package:flutter_application_test/third.dart';
 
 class SecondPage extends StatelessWidget {
   @override
@@ -18,21 +18,21 @@ class SecondPage extends StatelessWidget {
             children: [
               Center(
                 child: ElevatedButton(
-                  child: Text('次へ'),
+                  child: Text('スタイルを色々テストする'),
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => ThirdPage()));
                   },
                 ),
               ),
-              Center(
-                child: ElevatedButton(
-                  child: Text('戻る'),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
-              ),
+              // Center(
+              //   child: ElevatedButton(
+              //     child: Text('戻る'),
+              //     onPressed: () {
+              //       Navigator.pop(context);
+              //     },
+              //   ),
+              // ),
             ],
           ),
         ));

@@ -122,17 +122,17 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            ElevatedButton(
-              child: Text('次へ'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SecondPage(),
-                  ),
-                );
-              },
-            ),
+            // ElevatedButton(
+            //   child: Text('次へ'),
+            //   onPressed: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) => SecondPage(),
+            //       ),
+            //     );
+            //   },
+            // ),
           ],
         ),
       ),
