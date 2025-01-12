@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_test/navigation.dart';
 import 'package:flutter_application_test/fourth.dart';
 
-class ThirdPage extends StatelessWidget {
-  ThirdPage({super.key});
+class StyleTestPage extends StatelessWidget {
+  StyleTestPage({super.key});
 
   final con = Container(
     color: Colors.black,
