@@ -15,8 +15,16 @@
 
 ## API連携
 -   openweatherAPIとの連携
+    -   無料の天気情報を取得できるAPI
+    -   データ取得部分はほとんど[open_weather_example_flutter](https://github.com/bizz84/open_weather_example_flutter)のコードを利用した。
+    -   こちらを参考
+        -   [Open Weather MapのAPI取得方法](https://auto-worker.com/blog/?p=1612)
+
 -   Gemini生成AIとの連携
 -   Google APIを利用してみる(calender, Google map ... etc)
+    -   こちらを参考予定
+        -   [Google Maps Demo](https://github.com/flutter/samples/tree/main/google_maps)
+        -   [GoogleMap for Flutter あれこれ](https://zenn.dev/slowhand/articles/f4e4e092f9b72b)
 
 ## スタイル関連
 -   display: flexみたいなものがあるのか　-> 存在する(`Spacer(flex: 2)`)
