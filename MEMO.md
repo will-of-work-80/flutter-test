@@ -5,6 +5,7 @@
 -   ~ナビゲーション機能を実装~
 -   ~日付処理~
 -   ~ボタン機能~
+-   ~ウェブサイトをそのまま表示してみる~
 -   API連携
 -   データ編集
 -   エラーハンドリング
@@ -35,3 +36,10 @@
 -   こちらを参考
     -   [AppBarをコンポーネント化して全画面に同じデザインを反映させる](https://zenn.dev/lisras/articles/bdd4a43ce16cfc)
     -   [標準的で使いやすいサイドメニューを簡単に実装する Drawer](https://flutter.keicode.com/basics/drawer.php#google_vignette)
+
+## モバイル専用機能を使ってみる
+-   gradleのバージョンアップが必要だった
+    -   android/settings.gradle : 8.1.0 -> 8.2.1
+-   こちらを参考
+    -   [webview_flutter を使ってアプリ内にサイトを実装する](https://zenn.dev/koichi_51/articles/5a233d200b0d02)
+    -   [webview_flutter 4.10.0](https://pub.dev/packages/webview_flutter)

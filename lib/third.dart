@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_test/navigation.dart';
+import 'package:flutter_application_test/fourth.dart';
 
 class ThirdPage extends StatelessWidget {
+  ThirdPage({super.key});
+
   final con = Container(
     color: Colors.black,
     width: 10,
@@ -109,14 +112,15 @@ class ThirdPage extends StatelessWidget {
                   colorSquare(Colors.cyan),
                 ],
               ),
-              // Center(
-              //   child: ElevatedButton(
-              //     child: Text('戻る'),
-              //     onPressed: () {
-              //       Navigator.pop(context);
-              //     },
-              //   ),
-              // ),
+              Center(
+                child: ElevatedButton(
+                  child: Text('スクロールテスト画面'),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => FourthPage()));
+                  },
+                ),
+              ),
             ],
           ),
         ));

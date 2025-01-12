@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   # 日付フォーマット用
   intl: ^0.20.1
+  # アプリ内でウェブサイトを表示するためのパッケージ
+  webview_flutter: ^4.10.0
 
 dev_dependencies:
   flutter_test:

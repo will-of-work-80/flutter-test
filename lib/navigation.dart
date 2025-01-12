@@ -36,7 +36,7 @@ class NavigationComponentWidget extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('二つ目の画面'),
+            title: Text('ウェブブラウザーとして画面を表示'),
             onTap: () {
               Navigator.push(
                 context,
