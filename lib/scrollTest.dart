@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_test/navigation.dart';
 
-class FourthPage extends StatelessWidget {
-  const FourthPage({super.key});
+class ScrollViewTestPage extends StatelessWidget {
+  const ScrollViewTestPage({super.key});
 
   @override
   Widget build(BuildContext context) {

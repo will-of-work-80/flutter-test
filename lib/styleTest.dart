@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_test/navigation.dart';
-import 'package:flutter_application_test/fourth.dart';
+import 'package:flutter_application_test/scrollTest.dart';
 
 class StyleTestPage extends StatelessWidget {
   StyleTestPage({super.key});
@@ -116,8 +116,10 @@ class StyleTestPage extends StatelessWidget {
                 child: ElevatedButton(
                   child: Text('スクロールテスト画面'),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => FourthPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ScrollViewTestPage()));
                   },
                 ),
               ),
