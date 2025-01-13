@@ -38,6 +38,8 @@ dependencies:
   intl: ^0.20.1
   # アプリ内でウェブサイトを表示するためのパッケージ
   webview_flutter: ^4.10.0
+  # envファイルで環境変数を管理
+  flutter_dotenv: ^5.2.1
 
   # -------------------------------------------------------------------------------
   # Open Weather APIに必要なパッケージ
@@ -75,6 +77,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   # assets:
+  # 現在利用してないため、コメントアウト
+  #  - .env
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

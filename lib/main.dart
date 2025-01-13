@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_test/navigation.dart';
 import 'package:intl/intl.dart';
+// import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() {
   runApp(const MyApp());
 }
+// Future<void> main() async {
+//   await dotenv.load(fileName: '.env');
+//   runApp(const MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -59,6 +64,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   String dateNow = DateFormat("yyyy年M月d日HH:mm 現在").format(DateTime.now());
+  // String testKey = dotenv.get('TEST_KEY');
 
   void _incrementCounter() {
     setState(() {
