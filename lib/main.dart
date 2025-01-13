@@ -11,6 +11,7 @@ void main() {
 //   runApp(const MyApp());
 // }
 
+// 状態が変わらないWidget
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// 状態が変わるWidget
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 

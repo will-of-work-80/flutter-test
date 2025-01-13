@@ -1,18 +1,34 @@
+## 開発環境
+-   OS : Bootcampを利用したWindows 10
+    -   iOSのバージョンが古くXcode15がインストール出来なかったため。。。
+-   テスト環境 : Androidの実機、Chromeブラウザー
+-   コードエディター：VSCode
+-   ソースコード管理 : github
+
 ## やりたい事（終わった物は取り消し線）
--   ~Flutter空のプロジェクト生成~
--   ~追加画面作成~
--   ~画面遷移~
--   ~ナビゲーション機能を実装~
--   ~日付処理~
+-   ~Flutter空のプロジェクト生成~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/d668c1f8598405ab00453dd5fc91475b37dc150e)
+-   ~追加画面作成~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/a8a71f9bf84a77255572125cadcea9f7f88aca13)
+-   ~画面遷移~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/a8a71f9bf84a77255572125cadcea9f7f88aca13)
+-   ~ナビゲーション機能を実装~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/d9b7396dd025a4b4c6f60529e5370fccf68c2d64), [共通化commit](https://github.com/will-of-work-80/flutter-test/commit/bd7cfda3a087135a064c0ee95a93b863a4e92ecc)
+-   ~日付処理~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/e030cb0e22615fde5bee367a50cd2fb2dbbcecb8)
 -   ~ボタン機能~
--   ~ウェブサイトをそのまま表示してみる~
--   ~envファイルでの環境変数管理~
+-   ~ウェブサイトをそのまま表示してみる~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/74f4fc630dcd92e943c93bdac663ae913ca893a0)
+-   ~envファイルでの環境変数管理~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/e8f141e82a8c79e3fa9f71d1d5b73909590b9ff2)
 -   API連携
 -   データ編集
 -   エラーハンドリング
 -   画面を複数のコンポーネントで組み合わせる
 -   ログ機能を実装
 -   モバイル専用機能を使ってみる
+-   画像表示
+-   カルーセル機能実装
+
+## 勉強予定
+-   FlutterにもHooksがあるので調べる
+-   RiverPodを調べる
+-   HooksとRiverPod使い分け？組み合わせを調査
+    -   こちらを参考
+        -   [Hooksについて](https://riverpod.dev/ja/docs/concepts/about_hooks)
 
 ## API連携
 -   openweatherAPIとの連携
@@ -52,3 +68,20 @@
 -   こちらを参考
     -   [webview_flutter を使ってアプリ内にサイトを実装する](https://zenn.dev/koichi_51/articles/5a233d200b0d02)
     -   [webview_flutter 4.10.0](https://pub.dev/packages/webview_flutter)
+
+## Widgetの理解
+-   StatefulWidgetとStatelessWidget
+    -   こちらを参考
+        -   [StatefulWidgetとStatelessWidgetの違い](https://stv-tech.co.jp/blog/statefulwidget%E3%81%A8statelesswidget%E3%81%AE%E9%81%95%E3%81%84)
+-   ConsumerWidgetとConsumerStatefulWidget概念を理解しよう
+    -   こちらを参考
+        -   [riverpod 公式ドキュメントまとめ](https://qiita.com/GonpapaN/items/851a66d1a271d97ddf77)
+
+## トラブルシューティング
+-   画像がCORS違反でローカルのブラウザー環境で表示されない時の対処法
+    -   開発環境でのみ有効な対処らしいが、今回はこれで問題なし
+        -   flutter\bin\cacheのflutter_tools.stampを消す（cors...に名称変更）
+        -   flutter\packages\flutter_tools\lib\src\webのchrome.dartを変更する
+            `disable-extensions`の下に`disable-web-security`を追加する。
+    -   こちらを参考
+        -   [CORS policyを解決する3つの方法](https://flutter.salon/flutterweb/cors/)

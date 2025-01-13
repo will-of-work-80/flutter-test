@@ -5,6 +5,7 @@ import 'package:flutter_application_test/weather/application/providers.dart';
 import 'package:flutter_application_test/weather/domain/weather/weather_data.dart';
 import 'package:flutter_application_test/weather/presentation/weather_icon_image.dart';
 
+// StatelessWidgetの代わりにConsumerWidgetを継承してrefを使用できる
 class CurrentWeather extends ConsumerWidget {
   const CurrentWeather({super.key});
   @override
