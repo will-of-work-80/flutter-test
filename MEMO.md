@@ -20,7 +20,9 @@
 -   画面を複数のコンポーネントで組み合わせる
 -   ログ機能を実装
 -   モバイル専用機能を使ってみる
--   画像表示
+-   ~画像表示~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/48453636703d9f1d5912f0b09fb5e4dc57c32258)
+    -   こちらを参考
+        -   [画像をバックグラウンドに表示する](https://zenn.dev/captain_blue/articles/flutter-background-image)
 -   カルーセル機能実装
 
 ## 勉強予定

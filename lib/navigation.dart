@@ -15,15 +15,21 @@ class NavigationComponentWidget extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: [
-          DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.lightBlue,
-            ),
-            child: Text(
-              '機能一覧',
-              style: TextStyle(
-                fontSize: 24,
-                color: Colors.white,
+          SizedBox(
+            height: 100,
+            child: DrawerHeader(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                image: AssetImage('images/gara.jpg'),
+                fit: BoxFit.cover,
+              )),
+              child: Text(
+                '機能一覧',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
               ),
             ),
           ),
