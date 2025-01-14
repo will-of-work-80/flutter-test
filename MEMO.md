@@ -77,6 +77,11 @@
     -   こちらを参考
         -   [riverpod 公式ドキュメントまとめ](https://qiita.com/GonpapaN/items/851a66d1a271d97ddf77)
 
+## riverpodの色々
+-   `ConsumerWidget`と`Consumer`の使用例 : [commit](https://github.com/will-of-work-80/flutter-test/commit/f895b23d0c20b39c8b6fe3316be8f2a0ca586118)
+-   こちらを参考
+       -   [StateProviderの使い方｜サンプルを用いて解説](https://terupro.net/flutter-counter-app/)
+
 ## トラブルシューティング
 -   画像がCORS違反でローカルのブラウザー環境で表示されない時の対処法
     -   開発環境でのみ有効な対処らしいが、今回はこれで問題なし
@@ -85,3 +90,5 @@
             `disable-extensions`の下に`disable-web-security`を追加する。
     -   こちらを参考
         -   [CORS policyを解決する3つの方法](https://flutter.salon/flutterweb/cors/)
+-   riverpod を使ったときに Bad state: No ProviderScope foundエラーが出る
+    -   roviderScope widget で wrap する必要がある : [commit](https://github.com/will-of-work-80/flutter-test/commit/f895b23d0c20b39c8b6fe3316be8f2a0ca586118)

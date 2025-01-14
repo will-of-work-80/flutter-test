@@ -5,6 +5,7 @@ import 'package:flutter_application_test/webView.dart';
 import 'package:flutter_application_test/styleTest.dart';
 import 'package:flutter_application_test/scrollTest.dart';
 import 'package:flutter_application_test/weather.dart';
+import 'package:flutter_application_test/state_provider_test.dart';
 
 class NavigationComponentWidget extends StatelessWidget {
   const NavigationComponentWidget({super.key});
@@ -80,6 +81,28 @@ class NavigationComponentWidget extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => ScrollViewTestPage(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('StateProviderテスト(Plus)'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => StateProviderTestPage(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('StateProviderテスト(Minus)'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => StateProviderTestPage2(),
                 ),
               );
             },

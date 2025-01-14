@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_application_test/navigation.dart';
 import 'package:intl/intl.dart';
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() {
-  runApp(const MyApp());
+  // ProviderScopeで囲む
+  runApp(const ProviderScope(child: MyApp()));
 }
 // Future<void> main() async {
 //   await dotenv.load(fileName: '.env');
