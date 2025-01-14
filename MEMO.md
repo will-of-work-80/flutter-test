@@ -1,6 +1,6 @@
 ## 開発環境
 -   OS : Bootcampを利用したWindows 10
-    -   iOSのバージョンが古くXcode15がインストール出来なかったため。。。
+    -   macOSのバージョンが古くXcode15がインストール出来なかったため。。。
 -   テスト環境 : Androidの実機、Chromeブラウザー
 -   コードエディター：VSCode
 -   ソースコード管理 : github
