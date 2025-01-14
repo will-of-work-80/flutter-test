@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_application_test/main.dart';
-import 'package:flutter_application_test/webView.dart';
-import 'package:flutter_application_test/styleTest.dart';
-import 'package:flutter_application_test/scrollTest.dart';
+import 'package:flutter_application_test/web_view.dart';
+import 'package:flutter_application_test/style_test.dart';
+import 'package:flutter_application_test/scroll_test.dart';
 import 'package:flutter_application_test/weather.dart';
 import 'package:flutter_application_test/state_provider_test.dart';
 

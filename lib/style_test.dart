@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_test/navigation.dart';
-import 'package:flutter_application_test/scrollTest.dart';
+import 'package:flutter_application_test/scroll_test.dart';
 
 class StyleTestPage extends StatelessWidget {
   StyleTestPage({super.key});
