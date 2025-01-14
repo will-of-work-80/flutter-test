@@ -24,6 +24,7 @@
     -   こちらを参考
         -   [画像をバックグラウンドに表示する](https://zenn.dev/captain_blue/articles/flutter-background-image)
 -   カルーセル機能実装
+-   テストツールを導入する
 
 ## 勉強予定
 -   FlutterにもHooksがあるので調べる
@@ -93,4 +94,4 @@
     -   こちらを参考
         -   [CORS policyを解決する3つの方法](https://flutter.salon/flutterweb/cors/)
 -   riverpod を使ったときに Bad state: No ProviderScope foundエラーが出る
-    -   roviderScope widget で wrap する必要がある : [commit](https://github.com/will-of-work-80/flutter-test/commit/f895b23d0c20b39c8b6fe3316be8f2a0ca586118)
+    -   ProviderScope widget で wrap する必要がある : [commit](https://github.com/will-of-work-80/flutter-test/commit/f895b23d0c20b39c8b6fe3316be8f2a0ca586118)
