@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_application_test/main.dart';
 import 'package:flutter_application_test/web_view.dart';
 import 'package:flutter_application_test/style_test.dart';
@@ -35,88 +34,59 @@ class NavigationComponentWidget extends StatelessWidget {
               ),
             ),
           ),
-          ListTile(
-            title: Text('メイン画面'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => MyApp(),
-                ),
-              );
-            },
+          navigationItem(
+            context,
+            'メイン画面',
+            MyApp(),
           ),
-          ListTile(
-            title: Text('Open Weather APIテスト画面を表示'),
-            onTap: () {
-              Navigator.push(
-                context,
-                // ProviderScope widget で wrapする
-                // Bad state: No ProviderScope foundエラーが出るため
-                MaterialPageRoute(
-                  builder: (context) =>
-                      const ProviderScope(child: WeatherTestPage()),
-                ),
-              );
-            },
+          navigationItem(
+            context,
+            'Open Weather APIテスト画面を表示',
+            WeatherTestPage(),
           ),
-          ListTile(
-            title: Text('ウェブブラウザーとして画面を表示'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => WebviewTestPage(),
-                ),
-              );
-            },
+          navigationItem(
+            context,
+            'ウェブブラウザーとして画面を表示',
+            WebviewTestPage(),
           ),
-          ListTile(
-            title: Text('スタイルを色々テストする'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => StyleTestPage(),
-                ),
-              );
-            },
+          navigationItem(
+            context,
+            'スタイルを色々テストする',
+            StyleTestPage(),
           ),
-          ListTile(
-            title: Text('スクロールテスト'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ScrollViewTestPage(),
-                ),
-              );
-            },
+          navigationItem(
+            context,
+            'スクロールテスト',
+            ScrollViewTestPage(),
           ),
-          ListTile(
-            title: Text('StateProviderテスト(Plus)'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => StateProviderTestPage(),
-                ),
-              );
-            },
+          navigationItem(
+            context,
+            'StateProviderテスト(Plus)',
+            StateProviderTestPage(),
           ),
-          ListTile(
-            title: Text('StateProviderテスト(Minus)'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => StateProviderTestPage2(),
-                ),
-              );
-            },
+          navigationItem(
+            context,
+            'StateProviderテスト(Minus)',
+            StateProviderTestPage2(),
           ),
         ],
       ),
     );
   }
+}
+
+Widget navigationItem(BuildContext context, String title, Widget function) {
+  return ListTile(
+    title: Text(title),
+    onTap: () {
+      Navigator.push(
+        context,
+        // ProviderScope widget で wrapする
+        // Bad state: No ProviderScope foundエラーが出るため
+        MaterialPageRoute(
+          builder: (context) => function,
+        ),
+      );
+    },
+  );
 }
