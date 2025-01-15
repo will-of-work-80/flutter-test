@@ -14,6 +14,7 @@
 -   ~ボタン機能~
 -   ~ウェブサイトをそのまま表示してみる~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/74f4fc630dcd92e943c93bdac663ae913ca893a0)
 -   ~envファイルでの環境変数管理~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/e8f141e82a8c79e3fa9f71d1d5b73909590b9ff2)
+-   ~ダイアログを表示~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/e54c82f5629f1bfa1ae46114fc8ead61460cf4de)
 -   API連携
 -   データ編集
 -   エラーハンドリング
@@ -25,6 +26,7 @@
         -   [画像をバックグラウンドに表示する](https://zenn.dev/captain_blue/articles/flutter-background-image)
 -   カルーセル機能実装
 -   テストツールを導入する
+-   足し算アプリを作成する
 
 ## 勉強予定
 -   FlutterにもHooksがあるので調べる
@@ -46,6 +48,12 @@
         -   [Google Maps Demo](https://github.com/flutter/samples/tree/main/google_maps)
         -   [GoogleMap for Flutter あれこれ](https://zenn.dev/slowhand/articles/f4e4e092f9b72b)
 
+## 足し算アプリを作成する
+-   ~画面上入力ボタンを作成~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/e54c82f5629f1bfa1ae46114fc8ead61460cf4de)
+-   足し算の式を生成する
+-   一桁の足し算で結果は二桁まで
+-   当たったら`正解`間違ったら`不正解`文字をだす
+
 ## スタイル関連
 -   display: flexみたいなものがあるのか　-> 存在する(`Spacer(flex: 2)`)
     -   一つのラインで両端にアイテムを設置したい
@@ -56,7 +64,7 @@
 -   アイテムが画面を超える時にスクロールが可能にする
     -   こちらを参考
         -   [Columnで画面範囲を超えてしまったときの解決方法](https://flutterlabo.tech/note/na448cb31dd3a)
-
+-   ~ボタンを画面の一番下に表示したい~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/e54c82f5629f1bfa1ae46114fc8ead61460cf4de)
 
 ## ナビゲーション機能
 -   Drawerを利用して画面ページを移動できるナビゲーション機能を実装
