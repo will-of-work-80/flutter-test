@@ -22,6 +22,8 @@ class NavigationComponentWidget extends StatelessWidget {
                   image: DecorationImage(
                 image: AssetImage('images/gara.jpg'),
                 fit: BoxFit.cover,
+                // 透明度を追加
+                opacity: 0.4,
               )),
               child: Text(
                 '機能一覧',
