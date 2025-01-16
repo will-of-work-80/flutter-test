@@ -4,7 +4,8 @@ import 'dart:math' as math;
 
 final random = math.Random();
 
-final infoDefault = "数字を入力してください。";
+final infoDefault = '数字を入力してください。';
+final maxProcessCount = 10;
 
 class ElementarySchoolMath extends StatefulWidget {
   const ElementarySchoolMath({super.key});
@@ -24,6 +25,8 @@ class _ElementarySchoolMathState extends State<ElementarySchoolMath> {
   int secondNum = random.nextInt(10);
   // 選択されたレベル
   int selectLevel = 1;
+  // 足し算を行った数
+  List<bool> processCountList = [];
 
   setLevel() {
     return selectLevel == 1
@@ -47,6 +50,7 @@ class _ElementarySchoolMathState extends State<ElementarySchoolMath> {
         ),
         onPressed: () {
           setState(() {
+            processCountList = [];
             selectLevel = value;
             firstNum = setLevel();
             secondNum = setLevel();
@@ -57,30 +61,48 @@ class _ElementarySchoolMathState extends State<ElementarySchoolMath> {
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    Widget numberButton(String title) {
-      return Expanded(
-        child: TextButton(
-          style: TextButton.styleFrom(
-            backgroundColor: Colors.orange,
-            foregroundColor: Colors.white,
-            padding: EdgeInsets.all(16),
-          ),
-          onPressed: () {
-            setState(() {
-              if (inputStr == '') {
-                inputStr = title;
-              } else {
-                inputStr = inputStr + title;
-              }
-            });
-          },
-          child: Text(title, style: TextStyle(fontSize: 24)),
+  Widget numberButton(String title) {
+    return Expanded(
+      child: TextButton(
+        style: TextButton.styleFrom(
+          backgroundColor: Colors.orange,
+          foregroundColor: Colors.white,
+          padding: EdgeInsets.all(16),
         ),
-      );
+        onPressed: () {
+          setState(() {
+            if (inputStr == '') {
+              inputStr = title;
+            } else {
+              inputStr = inputStr + title;
+            }
+          });
+        },
+        child: Text(title, style: TextStyle(fontSize: 24)),
+      ),
+    );
+  }
+
+  Widget colorSquare(int rowNum) {
+    var squareColor = Colors.grey[350];
+    if (rowNum <= processCountList.length) {
+      final resultBool = processCountList[rowNum - 1];
+      squareColor = resultBool ? Colors.orange : Colors.grey[600];
     }
 
+    return Expanded(
+      child: Container(
+        height: 30,
+        decoration: BoxDecoration(
+          color: squareColor,
+          border: Border.all(),
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('低学年向け足し算アプリ'),
@@ -101,6 +123,14 @@ class _ElementarySchoolMathState extends State<ElementarySchoolMath> {
                     levelButton(3),
                   ],
                 ),
+                for (final processTotal in [
+                  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                ])
+                  Row(
+                    children: processTotal
+                        .map((rowNum) => colorSquare(rowNum))
+                        .toList(),
+                  ),
               ],
             ),
           ),
@@ -162,11 +192,36 @@ class _ElementarySchoolMathState extends State<ElementarySchoolMath> {
                       } else if (result.toString() == inputStr) {
                         infoStr = '正解です。';
                         inputStr = '';
-                        firstNum = random.nextInt(10);
-                        secondNum = random.nextInt(10);
+                        firstNum = setLevel();
+                        secondNum = setLevel();
+                        processCountList.add(true);
                       } else {
-                        infoStr = "$inputStrではありません。";
-                        inputStr = "";
+                        infoStr = '$inputStrではありません。';
+                        inputStr = '';
+                        firstNum = setLevel();
+                        secondNum = setLevel();
+                        processCountList.add(false);
+                      }
+                      if (processCountList.length == maxProcessCount) {
+                        showDialog<void>(
+                            context: context,
+                            builder: (_) {
+                              infoStr = infoDefault;
+                              final trueCount = processCountList
+                                  .where((item) => item == true)
+                                  .length;
+                              final falseCount = processCountList
+                                  .where((item) => item == false)
+                                  .length;
+                              processCountList = [];
+                              return AlertDialog(
+                                title: Text(
+                                    '終わりました！\n正解:$trueCount、はずれ:$falseCount',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    )),
+                              );
+                            });
                       }
                     });
                   },
