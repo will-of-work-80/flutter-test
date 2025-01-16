@@ -59,7 +59,7 @@
 -   ~入力ボタンを作成して配置~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/9cbef0b620a630d489f38d7349a9f8e82d10f6c6)
     -   こちらを参考
         -   [計算機アプリを依頼したら凄かった](https://qiita.com/YokohamaHori/items/575b7fcd675db2ca31af)
-
+-   ~ランダム関数を利用して式を作成する~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/8d4aea719e7085e9fabcb39dd7eeeb25b8f6453d)
 
 ## スタイル関連
 -   display: flexみたいなものがあるのか　-> 存在する(`Spacer(flex: 2)`)

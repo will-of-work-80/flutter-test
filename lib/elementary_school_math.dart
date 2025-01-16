@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_test/navigation.dart';
+import 'dart:math' as math;
+
+final random = math.Random();
+
+final infoDefault = "数字を入力してください。";
 
 class ElementarySchoolMath extends StatefulWidget {
   const ElementarySchoolMath({super.key});
@@ -9,8 +14,14 @@ class ElementarySchoolMath extends StatefulWidget {
 }
 
 class _ElementarySchoolMathState extends State<ElementarySchoolMath> {
+  // 情報を表示
+  String infoStr = infoDefault;
   // 足し算の結果入力用
   String inputStr = '';
+  // 問題のアイテム１
+  int firstNum = random.nextInt(10);
+  // 問題のアイテム２
+  int secondNum = random.nextInt(10);
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +57,31 @@ class _ElementarySchoolMathState extends State<ElementarySchoolMath> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Center(
+            child: Text(infoStr,
+                style: const TextStyle(fontSize: 20, color: Colors.red)),
+          ),
+          SizedBox(height: 20),
+          DefaultTextStyle(
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.blue,
+            ),
+            child: Row(
+              children: [
+                Expanded(child: SizedBox()),
+                Text('$firstNum'),
+                SizedBox(width: 10),
+                Text('+'),
+                SizedBox(width: 10),
+                Text('$secondNum'),
+                SizedBox(width: 10),
+                Text('='),
+                Expanded(child: SizedBox()),
+              ],
+            ),
+          ),
+          SizedBox(height: 20),
+          Center(
             child: Text(inputStr,
                 style: const TextStyle(
                     fontSize: 30, color: Colors.lightBlueAccent)),
@@ -70,16 +106,20 @@ class _ElementarySchoolMathState extends State<ElementarySchoolMath> {
                     ),
                   ),
                   onPressed: () {
-                    showDialog<void>(
-                        context: context,
-                        builder: (_) {
-                          return AlertDialog(
-                            title: Text('まだ機能未実装',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                )),
-                          );
-                        });
+                    setState(() {
+                      final result = firstNum + secondNum;
+                      if ('' == inputStr) {
+                        infoStr = infoDefault;
+                      } else if (result.toString() == inputStr) {
+                        infoStr = '正解です。';
+                        inputStr = '';
+                        firstNum = random.nextInt(10);
+                        secondNum = random.nextInt(10);
+                      } else {
+                        infoStr = "$inputStrではありません。";
+                        inputStr = "";
+                      }
+                    });
                   },
                   child: Text('入力', style: TextStyle(fontSize: 24)),
                 ),
