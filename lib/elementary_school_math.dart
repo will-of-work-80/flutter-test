@@ -22,6 +22,40 @@ class _ElementarySchoolMathState extends State<ElementarySchoolMath> {
   int firstNum = random.nextInt(10);
   // 問題のアイテム２
   int secondNum = random.nextInt(10);
+  // 選択されたレベル
+  int selectLevel = 1;
+
+  setLevel() {
+    return selectLevel == 1
+        ? random.nextInt(10)
+        : selectLevel == 2
+            ? random.nextInt(20)
+            : random.nextInt(100);
+  }
+
+  Widget levelButton(int value) {
+    return Expanded(
+      child: TextButton(
+        style: TextButton.styleFrom(
+          backgroundColor:
+              value == selectLevel ? Colors.red[100] : Colors.grey[300],
+          foregroundColor: value == selectLevel ? Colors.red : Colors.grey[500],
+          padding: EdgeInsets.all(10),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(0),
+          ),
+        ),
+        onPressed: () {
+          setState(() {
+            selectLevel = value;
+            firstNum = setLevel();
+            secondNum = setLevel();
+          });
+        },
+        child: Text('レベル$value', style: TextStyle(fontSize: 24)),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,6 +90,21 @@ class _ElementarySchoolMathState extends State<ElementarySchoolMath> {
         // 画面の一番下に表示するため、指定
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          // 画面の下に表示したくない物はこちらに指定
+          Expanded(
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    levelButton(1),
+                    levelButton(2),
+                    levelButton(3),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 50),
           Center(
             child: Text(infoStr,
                 style: const TextStyle(fontSize: 20, color: Colors.red)),

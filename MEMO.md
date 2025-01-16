@@ -60,6 +60,7 @@
     -   こちらを参考
         -   [計算機アプリを依頼したら凄かった](https://qiita.com/YokohamaHori/items/575b7fcd675db2ca31af)
 -   ~ランダム関数を利用して式を作成する~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/8d4aea719e7085e9fabcb39dd7eeeb25b8f6453d)
+-   ~計算式をレベル3に分ける~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/c7e3d53a3c60b4f2997d699bc7f1c06325465a8d)
 
 ## スタイル関連
 -   display: flexみたいなものがあるのか　-> 存在する(`Spacer(flex: 2)`)
