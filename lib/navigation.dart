@@ -5,6 +5,7 @@ import 'package:flutter_application_test/style_test.dart';
 import 'package:flutter_application_test/scroll_test.dart';
 import 'package:flutter_application_test/weather.dart';
 import 'package:flutter_application_test/state_provider_test.dart';
+import 'package:flutter_application_test/elementary_school_math.dart';
 
 class NavigationComponentWidget extends StatelessWidget {
   const NavigationComponentWidget({super.key});
@@ -58,6 +59,11 @@ class NavigationComponentWidget extends StatelessWidget {
             context,
             'スクロールテスト',
             ScrollViewTestPage(),
+          ),
+          navigationItem(
+            context,
+            '低学年向け足し算アプリ',
+            ElementarySchoolMath(),
           ),
           navigationItem(
             context,

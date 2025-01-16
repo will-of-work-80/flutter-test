@@ -27,6 +27,7 @@
 -   カルーセル機能実装
 -   テストツールを導入する
 -   足し算アプリを作成する
+    -   低学年向け足し算アプリ
 
 ## 勉強予定
 -   FlutterにもHooksがあるので調べる
@@ -53,6 +54,12 @@
 -   足し算の式を生成する
 -   一桁の足し算で結果は二桁まで
 -   当たったら`正解`間違ったら`不正解`文字をだす
+
+## 低学年向け足し算アプリ
+-   ~入力ボタンを作成して配置~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/9cbef0b620a630d489f38d7349a9f8e82d10f6c6)
+    -   こちらを参考
+        -   [計算機アプリを依頼したら凄かった](https://qiita.com/YokohamaHori/items/575b7fcd675db2ca31af)
+
 
 ## スタイル関連
 -   display: flexみたいなものがあるのか　-> 存在する(`Spacer(flex: 2)`)
