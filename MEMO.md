@@ -60,8 +60,8 @@
     -   こちらを参考
         -   [計算機アプリを依頼したら凄かった](https://qiita.com/YokohamaHori/items/575b7fcd675db2ca31af)
 -   ~ランダム関数を利用して式を作成する~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/8d4aea719e7085e9fabcb39dd7eeeb25b8f6453d)
--   ~計算式をレベル3に分ける~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/c7e3d53a3c60b4f2997d699bc7f1c06325465a8d)
--   ~状態バーを追加~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/902a05385eff6b8fd4ff2a677e41711036c0af36)
+-   ~計算式をレベル3に分ける~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/f8845eeaf2e67ddb82ec2a563c3556a5f320359f)
+-   ~状態バーを追加~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/06fb5d6095832ae05d46b7a7642b717b7987b2e7)
 -   StateProviderは利用しないでローカル変数のみでの対応
 
 ## スタイル関連

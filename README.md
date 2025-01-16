@@ -6,7 +6,7 @@ FlutterとDartの勉強用
 
 ## Screenshots
 
-<img src="https://github.com/user-attachments/assets/6ba324c8-9a7a-449d-a8c8-15359c4f56f5" width="270px" />
+<img src="https://github.com/user-attachments/assets/f9b92157-13e8-4173-965c-6403d4cf2d3c" width="270px" />
 <img src="https://github.com/user-attachments/assets/388014d3-475f-40ce-ab1a-23f2fd8179f8" width="270px" />
 <img src="https://github.com/user-attachments/assets/42b019e5-31a9-4b5d-b7aa-763748177a47" width="270px" />
 <img src="https://github.com/user-attachments/assets/174b91f3-f5fb-4ae7-b052-4d41e63a5b5e" width="270px" />
