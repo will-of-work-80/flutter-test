@@ -63,6 +63,8 @@
 -   ~計算式をレベル3に分ける~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/f8845eeaf2e67ddb82ec2a563c3556a5f320359f)
 -   ~状態バーを追加~ : [commit](https://github.com/will-of-work-80/flutter-test/commit/06fb5d6095832ae05d46b7a7642b717b7987b2e7)
 -   StateProviderは利用しないでローカル変数のみでの対応
+-   画面遷移してもレベル情報は保持できるようにする : [commit](https://github.com/will-of-work-80/flutter-test/commit/a7a880e90124b6020e33399230398206c0919872)
+
 
 ## スタイル関連
 -   display: flexみたいなものがあるのか　-> 存在する(`Spacer(flex: 2)`)

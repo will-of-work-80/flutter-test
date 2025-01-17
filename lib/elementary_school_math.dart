@@ -20,11 +20,11 @@ class _ElementarySchoolMathState extends State<ElementarySchoolMath> {
   // 足し算の結果入力用
   String inputStr = '';
   // 問題のアイテム１
-  int firstNum = random.nextInt(10);
+  static int firstNum = random.nextInt(10);
   // 問題のアイテム２
-  int secondNum = random.nextInt(10);
+  static int secondNum = random.nextInt(10);
   // 選択されたレベル
-  int selectLevel = 1;
+  static int selectLevel = 1;
   // 足し算を行った数
   List<bool> processCountList = [];
 
